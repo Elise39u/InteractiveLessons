@@ -40,3 +40,8 @@ This with the given template name at the start of this section
 # Testing and how to do it 
 # Submitting Bugs and what are they  
 # Submitting Issues and what are they     
+# Releases version  
+For release we are aming to follow the X.Y.Z Rule. With it working as follows:  
+ - X standing for a major release  
+ - Y standing for a minior release  
+ - Z standing for a patch release  
