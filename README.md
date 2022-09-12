@@ -23,7 +23,7 @@ After a version has been tested and all the required test has been passed you en
 This branch is designed to be the branch where a version from can be made and tested by either yourself or testers.
 This with the underling thought that users dont always use the application as we plan.  
 So they often find bugs or issues. Make sure that if there are found to use the template provided in documents:  
-`documents/bugtemplate` and `documents/issuetemplate`  
+`ISSUES_TEMPLATE/bug_report` and `ISSUES_TEMPLATE/issue-report`  
 ### Test branch 
 The branch where most of the versions go after the devs are done with programming.  
 `CI Support is still coming` but keep in mind that:  
