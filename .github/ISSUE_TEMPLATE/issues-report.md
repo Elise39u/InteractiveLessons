@@ -1,8 +1,7 @@
 ---
-name: Issues report
-about: To be clear a bug can be anything inside the code or application. Issues can
-  also be extern or requests for example
-title: "*Placeholder* Request for adding a clear ux for the older teachers "
+name: ' Issues report'
+about: ' To be clear a bug can be anything inside the code or application.  Issues can also be extern or requests for example'
+title: ' Example: Request for adding a clear ux for the older teachers '
 labels: ''
 assignees: ''
 
