@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: 'Help us improve by submitting a bug or issue report '
-title: Version [X.Y.Z] Login submit doesnt do anything
+title: ' Version [X.Y.Z] Login submit doesnt do anything ' *(This is a placeholder)*
 labels: ''
 assignees: ''
 
