@@ -18,13 +18,12 @@ If you make a new branch please name it as followed: `what_your_making+Name` to 
 The main branch that we try to maintain bug and issue free.  
 Here is where worked out "Beta" release are pushed to from the branch called Main  
 Its smart that if you want to Contriubte to make a branch from the Master or Main. Only dont to read the contributing part here after  
-
 ### Main or called Beta Branch  
 After a version has been tested and all the required test has been passed you end up in this branch.  
 This branch is designed to be the branch where a version from can be made and tested by either yourself or testers.
 This with the underling thought that users dont always use the application as we plan.  
 So they often find bugs or issues. Make sure that if there are found to use the template provided in documents:  
-`documents/bugtemplate` and `documents/issuetemplate`  
+`ISSUES_TEMPLATE/bug_report` and `ISSUES_TEMPLATE/issue-report`  
 ### Test branch 
 The branch where most of the versions go after the devs are done with programming.  
 `CI Support is still coming` but keep in mind that:  
