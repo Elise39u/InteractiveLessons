@@ -11,7 +11,7 @@ I highly recommend to read the requirment list i leave in `documentation/require
 
 # Documents  
 All the nesscarry documents can be found in the folder `documentation` for the project.  
-But i will provide a short list what you can find in there. Please keep in mind every document is in word version their!  
+But i will provide a short list what you can find in there. Please keep in mind every document is in pdf version their!  
  - Code Conduct -> Known as the code rules to follow in the project  
  - Requirment_List -> List with all the given requirements. Be aware this is from when i got the job.  
  - How to Contribute -> A document that will help you guid on how to contribute to the application.  
