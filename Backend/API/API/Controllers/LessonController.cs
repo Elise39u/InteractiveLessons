@@ -7,10 +7,18 @@ namespace API.Controllers;
 [Route("[controller]")]
 public class LessonController : ControllerBase
 {
+        
     [HttpGet("AllLessons")]
     public List<Lesson> GetLessons()
     {
-        throw new NotImplementedException();
+        List<Lesson> lessons = new List<Lesson>();
+        for (int i = 0; i < 4; i++)
+        {
+            Lesson lesson = new Lesson(i, "Music" + i, new Subject(1, "Guitar Lessons"));
+            lessons.Add(lesson);
+        }
+
+        return lessons;
     }
 
     [HttpGet("{lessonId:int}")]

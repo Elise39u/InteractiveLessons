@@ -6,22 +6,22 @@ public class Hint
     private readonly int _questionId;
     private readonly string _hintTxT;
 
-    private int HintId
+    public int HintId
     {
         get => _hintId; 
-        init => _hintId = value;
+        private init => _hintId = value;
     }
 
-    private int QuestionId
+    public int QuestionId
     {
         get => _questionId;
-        init => _questionId = value;
+        private init => _questionId = value;
     }
 
-    private string HintTxT
+    public string HintTxT
     {
         get => _hintTxT;
-        init => _hintTxT = value;
+        private init => _hintTxT = value;
     }
 
     public Hint(int hintId, int questionId, string hintTxT)

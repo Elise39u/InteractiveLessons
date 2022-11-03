@@ -5,15 +5,15 @@ public class Subject
     private readonly int _subjectId;
     private readonly string _subjectName;
 
-    private int SubjectId
+    public int SubjectId
     {
         get => _subjectId; 
-        init => _subjectId = value;
+        private init => _subjectId = value;
     }
-    private string SubjectName
+    public string SubjectName
     {
         get => _subjectName;
-        init => _subjectName = value;
+        private init => _subjectName = value;
     }
 
     public Subject(int subjectId, string subjectName)

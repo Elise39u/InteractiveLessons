@@ -5,24 +5,24 @@ public class Question
     private readonly int _questionId;
     private readonly QuestionTypes _questionTypes;
     private readonly string _questionTxt;
-    private List<Hint> _questionHints;
+    private List<Hint> QuestionHints { get; } = new List<Hint>();
 
-    private int QuesitonId
+    public int QuesitonId
     {
         get => _questionId;
-        init => _questionId = value;
+        private init => _questionId = value;
     }
 
-    private  QuestionTypes QuestionType
+    public QuestionTypes QuestionType
     {
         get => _questionTypes;
-        init => _questionTypes = value;
+        private init => _questionTypes = value;
     }
 
-    private string QuestionTxT
+    public string QuestionTxT
     {
         get => _questionTxt;
-        init => _questionTxt = value;
+        private init => _questionTxt = value;
     }
 
     public Question(int questionId, QuestionTypes questionType, string questionTxt)
@@ -31,6 +31,14 @@ public class Question
         QuestionType = questionType;
         QuestionTxT = questionTxt;
     }
+
+    public List<Hint> AddHintToList(Hint hint)
+    {
+        QuestionHints.Add(hint);
+        return QuestionHints;
+    }
+    
+    
 }
 
 public enum QuestionTypes

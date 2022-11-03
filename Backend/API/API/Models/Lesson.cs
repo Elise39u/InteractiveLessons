@@ -5,26 +5,24 @@ public class Lesson
     private readonly int _lessonId;
     private readonly string _lessonName;
     private readonly Subject _lessonSubject;
-    private readonly List<Question> _lessonQuestions;
+    private List<Question> LessonQuestions { get; } = new List<Question>();
     
-    //TODO: Add Questions List to this model class
-
-    private int LessonId
+    public int LessonId
     {
         get => _lessonId; 
-        init => _lessonId = value; 
+        private init => _lessonId = value; 
     }
 
-    private string LessonName
+    public string LessonName
     {
         get => _lessonName;
-        init => _lessonName = value;
+        private init => _lessonName = value;
     }
 
-    private Subject LessonSubject
+    public Subject LessonSubject
     {
         get => _lessonSubject;
-        init => _lessonSubject = value;
+        private init=> _lessonSubject = value;
     }
 
     public Lesson(int lessonId, string lessonName, Subject lessonSubject)
@@ -32,5 +30,11 @@ public class Lesson
         LessonId = lessonId;
         LessonName = lessonName;
         LessonSubject = lessonSubject;
+    }
+
+    public List<Question> AddQuestionToList(Question question)
+    {
+        LessonQuestions.Add(question);
+        return LessonQuestions;
     }
 }

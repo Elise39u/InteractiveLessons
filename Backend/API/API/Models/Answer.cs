@@ -8,34 +8,34 @@ public class Answer
     private readonly string _imgLink;
     private readonly bool _isCorrect;
 
-    private int AnswerId
+    public int AnswerId
     {
         get => _answerId; 
-        init => _answerId = value;
+        private init => _answerId = value;
     }
 
-    private int QuestionId
+    public int QuestionId
     {
         get => _questionId; 
-        init => _questionId = value;
+        private init => _questionId = value;
     }
 
-    private string AnswerValue
+    public string AnswerValue
     {
         get => _answerValue;
-        init => _answerValue = value;
+        private init => _answerValue = value;
     }
 
-    private string ImgLink
+    public string ImgLink
     {
         get => _imgLink; 
-        init => _imgLink = value;
+        private init => _imgLink = value;
     }
 
-    private bool IsCorrect
+    public bool IsCorrect
     {
         get => _isCorrect;
-        init => _isCorrect = value;
+        private init => _isCorrect = value;
     }
 
     public Answer(int answerId, int questionId, string answerValue, string imgLink, bool isCorrect)
