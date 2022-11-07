@@ -6,6 +6,7 @@ public class Question
     private readonly QuestionTypes _questionTypes;
     private readonly string _questionTxt;
     private List<Hint> QuestionHints { get; } = new List<Hint>();
+    private List<KeyValuePair<int, string>> TeacherQuestionTxT { get; } = new List<KeyValuePair<int, string>>();
 
     public int QuesitonId
     {
@@ -37,8 +38,12 @@ public class Question
         QuestionHints.Add(hint);
         return QuestionHints;
     }
-    
-    
+
+    public List<KeyValuePair<int, string>> AddTeacherTxt(int questionId, string teacherTxt)
+    {
+        TeacherQuestionTxT.Add(new KeyValuePair<int, string>(questionId, teacherTxt));
+        return TeacherQuestionTxT;
+    }
 }
 
 public enum QuestionTypes

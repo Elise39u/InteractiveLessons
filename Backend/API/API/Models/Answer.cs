@@ -7,6 +7,7 @@ public class Answer
     private readonly string _answerValue;
     private readonly string _imgLink;
     private readonly bool _isCorrect;
+    private List<KeyValuePair<int, string>> TeacherAnswerTxT { get; } = new List<KeyValuePair<int, string>>();
 
     public int AnswerId
     {
@@ -46,4 +47,10 @@ public class Answer
         ImgLink = imgLink;
         IsCorrect = isCorrect;
     }
+
+    public List<KeyValuePair<int, string>> AddTeacherAnswerTxt(int answerId, string teacherTxT)
+    {
+        TeacherAnswerTxT.Add(new KeyValuePair<int, string>(answerId, teacherTxT));
+        return TeacherAnswerTxT;
+    } 
 }
