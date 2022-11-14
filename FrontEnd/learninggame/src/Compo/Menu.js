@@ -7,7 +7,7 @@ import '../CSS/Menu.css'
 
 function NavBarMenu() {
     return (
-        <Navbar bg="dark" expand="lg" variant="dark">
+        <Navbar className={"Navbar"} expand="lg" variant="dark">
             <Container>
                 <Navbar.Brand href="/">Home</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

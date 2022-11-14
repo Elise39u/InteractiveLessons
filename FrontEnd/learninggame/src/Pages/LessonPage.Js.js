@@ -1,4 +1,5 @@
 import NavBarMenu from "../Compo/Menu";
+import '../CSS/App.css';
 import LessonButtons from "../Compo/LessonButtons";
 
 let userName = "";
@@ -14,7 +15,7 @@ function LessonPage() {
        <div className="LessonPage">
            <NavBarMenu />
            <div className={"appMainDiv"}>
-               <h1> Welcome {userName} to tuba lessons! </h1>
+               <h1 className={"txtApp"}> Welcome {userName} to tuba lessons! </h1>
                <LessonButtons />
            </div>
        </div>
