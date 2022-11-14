@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Menu from "./Compo/Menu";
+import App from "./Pages/App";
+import LessonPage from "./Pages/LessonPage.Js";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Menu />} />
+              <Route index element={<App />} />
+              <Route path="Lessons" element={<LessonPage />} />
+          </Routes>
+      </BrowserRouter>
   </React.StrictMode>
 );
 
