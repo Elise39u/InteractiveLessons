@@ -33,6 +33,11 @@ public class Question
         QuestionTxT = questionTxt;
     }
 
+    public Question()
+    {
+        
+    }
+    
     public List<Hint> AddHintToList(Hint hint)
     {
         QuestionHints.Add(hint);

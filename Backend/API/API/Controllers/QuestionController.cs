@@ -19,6 +19,12 @@ public class QuestionController : ControllerBase
         throw new NotImplementedException();
     }
 
+    [HttpGet("{lessonId:int}")]
+    public List<Question> GetQuestionsByLessonId(int lessonId)
+    {
+        throw new NotImplementedException();
+    }
+    
     [HttpGet("GetAnswers/{questionId:int}")]
     public dynamic GetAnswersForQuestion(int questionId)
     {

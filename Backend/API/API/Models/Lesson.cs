@@ -32,6 +32,11 @@ public class Lesson
         LessonSubject = lessonSubject;
     }
 
+    public Lesson()
+    {
+        
+    }
+
     public List<Question> AddQuestionToList(Question question)
     {
         LessonQuestions.Add(question);
