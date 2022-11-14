@@ -1,0 +1,17 @@
+.Navbar {
+    background: #FFAE42;
+    border: black 1px solid;
+}
+
+a {
+    color: black!important;
+}
+
+.dropdown-item, .dropdown-menu {
+    background: #FFAE42;
+    color: black;
+}
+
+.dropdown-menu {
+    border: white 1px solid;
+}
