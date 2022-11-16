@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import '../CSS/getLessonCalls.css'
+import Container from "react-bootstrap/Container";
+import {Col, Row} from "react-bootstrap";
 
 class GetLessonCall extends React.Component {
     constructor(props) {
@@ -24,6 +26,8 @@ class GetLessonCall extends React.Component {
     }
 
     render() {
+        let subjectId = 0;
+
         const { LoadingData, lessons} = this.state
         if(!LoadingData) {
             return <div> <h1> Data is loading please wait </h1></div>
@@ -32,16 +36,25 @@ class GetLessonCall extends React.Component {
         return (
             <div className={"GetLessonCall"}>
                 <h1 className={"appMainDiv"}> Time too learn something new? </h1>
-                 {
-                      lessons.map((lesson) => {
-                          if(lesson.isLocked === true) {
-                            return <Button variant={"danger"} disabled> {lesson.lessonName} </Button>
-                          }
-                          else {
-                            return <div className={"ButtonDiv"}> <Button variant={"warning"}> {lesson.lessonName} </Button> </div>
-                          }
-                      })
-                    }
+                <Container>
+                    <Row>
+                     {
+                          lessons.map((lesson) => {
+                              if(subjectId !== lesson.lessonSubject.subjectId) {
+                                  subjectId = lesson.lessonSubject.subjectId;
+                                  return [ <h1> {lesson.lessonSubject.subjectName} </h1>,
+                                      <Col> <Button variant={"warning"}> {lesson.lessonName} </Button> </Col> ]
+                              } else {
+                                  if (lesson.isLocked === true) {
+                                      return  <Col>   <Button variant={"danger"} disabled> {lesson.lessonName} </Button> </Col>
+                                  } else {
+                                      return <Col>   <Button variant={"warning"}> {lesson.lessonName} </Button> </Col>
+                                  }
+                              }
+                          })
+                        }
+                    </Row>
+                </Container>
             </div>
         )
     }
