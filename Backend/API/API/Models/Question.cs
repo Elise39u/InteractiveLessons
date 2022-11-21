@@ -56,5 +56,6 @@ public enum QuestionTypes
     MULTIPLE_CHOICE = 0,
     TEXT = 1,
     LISTENING = 2,
-    MUSIC_GUESSING = 3,
+    MUSIC_MAKING = 3,
+    QUICK_ANSWERING = 4
 }

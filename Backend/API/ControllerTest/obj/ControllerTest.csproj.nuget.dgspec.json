@@ -4,14 +4,14 @@
     "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\ControllerTest\\ControllerTest.csproj": {}
   },
   "projects": {
-    "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\API\\API.csproj": {
+    "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\APIDTO\\APIDTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\API\\API.csproj",
-        "projectName": "API",
-        "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\API\\API.csproj",
+        "projectUniqueName": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\APIDTO\\APIDTO.csproj",
+        "projectName": "APIDTO",
+        "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\APIDTO\\APIDTO.csproj",
         "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
-        "outputPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\API\\obj\\",
+        "outputPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\APIDTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,9 +38,78 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\API\\API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
+        "outputPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\APIDTO\\APIDTO.csproj": {
+                "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\APIDTO\\APIDTO.csproj"
+              },
+              "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\LogicLayer\\LogicLayer.csproj": {
+                "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\LogicLayer\\LogicLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -111,6 +180,10 @@
               "target": "Package",
               "version": "[16.11.0, )"
             },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
             "NUnit": {
               "target": "Package",
               "version": "[3.13.2, )"
@@ -122,6 +195,198 @@
             "coverlet.collector": {
               "target": "Package",
               "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALDTO\\DALDTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALDTO\\DALDTO.csproj",
+        "projectName": "DALDTO",
+        "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALDTO\\DALDTO.csproj",
+        "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
+        "outputPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALDTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALLayer\\DALLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALLayer\\DALLayer.csproj",
+        "projectName": "DALLayer",
+        "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALLayer\\DALLayer.csproj",
+        "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
+        "outputPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALDTO\\DALDTO.csproj": {
+                "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALDTO\\DALDTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\LogicLayer\\LogicLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\LogicLayer\\LogicLayer.csproj",
+        "projectName": "LogicLayer",
+        "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\LogicLayer\\LogicLayer.csproj",
+        "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
+        "outputPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\LogicLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\APIDTO\\APIDTO.csproj": {
+                "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\APIDTO\\APIDTO.csproj"
+              },
+              "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALDTO\\DALDTO.csproj": {
+                "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALDTO\\DALDTO.csproj"
+              },
+              "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALLayer\\DALLayer.csproj": {
+                "projectPath": "D:\\school\\S5 Stage\\Git Folder\\Backend\\API\\DALLayer\\DALLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.1, )"
             }
           },
           "imports": [
