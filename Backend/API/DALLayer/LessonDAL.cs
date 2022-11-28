@@ -24,6 +24,7 @@ public class LessonDAL
             _dalLessonDtos.Add(lesson);
         }
 
+        _dbConnection.CloseConnection();
         return _dalLessonDtos;
     }
 }

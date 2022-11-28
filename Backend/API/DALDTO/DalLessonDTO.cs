@@ -2,7 +2,6 @@
 
 public class DalLessonDTO
 {
-    
     private readonly int _lessonId;
     private readonly string _lessonName;
     private readonly DalSubjectDTO _lessonSubject;

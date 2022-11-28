@@ -1,8 +1,10 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+//import Button from "react-bootstrap/Button";
 import '../CSS/getLessonCalls.css'
 import Container from "react-bootstrap/Container";
 import {Col, Row} from "react-bootstrap";
+import loadingGif from "../Img/loading.gif"
+import {Link} from "react-router-dom";
 
 class GetLessonCall extends React.Component {
     constructor(props) {
@@ -10,7 +12,8 @@ class GetLessonCall extends React.Component {
 
         this.state = {
             LoadingData: false,
-            lessons: []
+            lessons: [],
+            lessonId: 0
         }
     }
 
@@ -30,7 +33,10 @@ class GetLessonCall extends React.Component {
 
         const { LoadingData, lessons} = this.state
         if(!LoadingData) {
-            return <div> <h1> Data is loading please wait </h1></div>
+            return <div> <h1> Please wait </h1>
+                <img src={loadingGif} alt="were getting your lessons hold on"  />
+                <p> were getting your data as fast as we can </p>
+            </div>
         }
 
         return (
@@ -43,12 +49,13 @@ class GetLessonCall extends React.Component {
                               if(subjectId !== lesson.lessonSubject.subjectId) {
                                   subjectId = lesson.lessonSubject.subjectId;
                                   return [ <h1> {lesson.lessonSubject.subjectName} </h1>,
-                                      <Col md={3}> <Button variant={"warning"}> {lesson.lessonName} </Button> </Col>  ]
+                                      <Col md={3}> <Link to={{ pathname: "/LoadingQuestions", state: { lessonId: lesson.lessonId}}}
+                                                         className={"btn btn-warning"}> {lesson.lessonName} </Link> </Col>  ]
                               } else {
                                   if (lesson.isLocked === true) {
-                                      return  <Col md={3}>   <Button variant={"danger"} disabled> {lesson.lessonName} </Button> </Col>
+                                      return  <Col md={3}>   <Link className={"btn btn-danger disabled-link"} > {lesson.lessonName} </Link> </Col>
                                   } else {
-                                      return <Col md={3}>   <Button variant={"warning"}> {lesson.lessonName} </Button> </Col>
+                                      return <Col md={3}>   <Link className={"btn btn-danger disabled-link"}> {lesson.lessonName} </Link> </Col>
                                   }
                               }
                           })

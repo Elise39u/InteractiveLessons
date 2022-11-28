@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./Compo/Menu";
 import App from "./Pages/App";
 import LessonPage from "./Pages/LessonPage.Js";
+import LoadingQuestions from "./Pages/LoadingQuestions.js"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +17,7 @@ root.render(
               <Route path="/" element={<Menu />} />
               <Route index element={<App />} />
               <Route path="Lessons" element={<LessonPage />} />
+              <Route path="LoadingQuestions" element={<LoadingQuestions />} />
           </Routes>
       </BrowserRouter>
   </React.StrictMode>

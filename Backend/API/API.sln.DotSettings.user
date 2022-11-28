@@ -1,5 +1,12 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8d0659e7_002Deb1a_002D42d4_002D9441_002D654f5e63a6d2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from LessonControllerTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2938651c_002D7b25_002D40c8_002D8aab_002D04005d34c1b2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetAllLessons_Succes" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::23009CDF-F85D-4F62-A656-25448A643DA9::net6.0::ControllerTest.LessonControllerTest.GetAllLessons_Succes&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::64038DBF-1A81-4AE9-99B9-DA3A40C4F54E::net6.0::DALLayerTest.DALLessonTests.Get_All_Lessons_Succes&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::64038DBF-1A81-4AE9-99B9-DA3A40C4F54E::net6.0::DALLayerTest.DALQuestionTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8d0659e7_002Deb1a_002D42d4_002D9441_002D654f5e63a6d2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from LessonControllerTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;Project Location="D:\school\S5 Stage\Git Folder\Backend\API\ControllerTest" Presentation="&amp;lt;ControllerTest&amp;gt;" /&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
@@ -8,4 +15,11 @@
       &lt;TestId&gt;NUnit3x::64038DBF-1A81-4AE9-99B9-DA3A40C4F54E::net6.0::DALLayerTest.DALLessonTests.Get_All_Lessons_Succes&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c08baeb4_002Da863_002D49f6_002D8082_002D44ef68f96b6e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetAllLessons_Succes #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::23009CDF-F85D-4F62-A656-25448A643DA9::net6.0::ControllerTest.LessonControllerTest.GetAllLessons_Succes&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::64038DBF-1A81-4AE9-99B9-DA3A40C4F54E::net6.0::DALLayerTest.DALLessonTests.Get_All_Lessons_Succes&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::64038DBF-1A81-4AE9-99B9-DA3A40C4F54E::net6.0::DALLayerTest.DALQuestionTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

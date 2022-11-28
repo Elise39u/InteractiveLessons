@@ -1,5 +1,8 @@
 ﻿using API.Models;
+using APIDTO;
+using LogicLayer;
 using Microsoft.AspNetCore.Mvc;
+using QuestionTypes = API.Models.QuestionTypes;
 
 namespace API.Controllers;
 
@@ -7,22 +10,34 @@ namespace API.Controllers;
 [Route("[controller]")]
 public class QuestionController : ControllerBase
 {
+    private readonly QuestionLogic _questionLogic = new QuestionLogic();
     [HttpGet("AllQuestions")]
     public List<Question> GetAllQuestions()
     {
         throw new NotImplementedException();
     }
 
-    [HttpGet("{questionId:int}")]
+    [HttpGet("ById/{questionId:int}")]
     public Question GetQuestionById(int questionId)
     {
         throw new NotImplementedException();
     }
 
-    [HttpGet("{lessonId:int}")]
+    [HttpGet("ByLesson/{lessonId:int}")]
     public List<Question> GetQuestionsByLessonId(int lessonId)
     {
-        throw new NotImplementedException();
+        List<Question> questions = new List<Question>();
+        List<ApiQuestionDTO> apiQuestionDtos =  _questionLogic.GetAllLessonQuestionsById(lessonId);
+
+        for (int i = 0; i < apiQuestionDtos.Count; i++)
+        {
+            Question question = new Question(apiQuestionDtos[i].QuesitonId, (QuestionTypes)apiQuestionDtos[i].QuestionType,
+                apiQuestionDtos[i].QuestionTxT);
+            
+            questions.Add(question);
+        }
+
+        return questions;
     }
     
     [HttpGet("GetAnswers/{questionId:int}")]
