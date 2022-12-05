@@ -1,10 +1,9 @@
 import React from "react";
-//import Button from "react-bootstrap/Button";
+import Button from "react-bootstrap/Button";
 import '../CSS/getLessonCalls.css'
 import Container from "react-bootstrap/Container";
 import {Col, Row} from "react-bootstrap";
 import loadingGif from "../Img/loading.gif"
-import {Link} from "react-router-dom";
 
 class GetLessonCall extends React.Component {
     constructor(props) {
@@ -15,6 +14,21 @@ class GetLessonCall extends React.Component {
             lessons: [],
             lessonId: 0
         }
+    }
+
+    setLessonId() {
+        if(this.state.lessonId === 0) {} else {
+            localStorage.setItem("lessonId", this.state.lessonId)
+            window.location = "/LoadingQuestions"
+        }
+    }
+
+    changeLessonIdState(e, name) {
+        localStorage.removeItem("lessonId")
+        e.preventDefault();
+        const lessonIdInArray = this.state.lessons.find(element => element.lessonName === name )
+        this.setState({lessonId: lessonIdInArray.lessonId})
+        this.setLessonId()
     }
 
     componentDidMount() {
@@ -31,37 +45,38 @@ class GetLessonCall extends React.Component {
     render() {
         let subjectId = 0;
 
-        const { LoadingData, lessons} = this.state
-        if(!LoadingData) {
+        if(!this.state.LoadingData) {
             return <div> <h1> Please wait </h1>
                 <img src={loadingGif} alt="were getting your lessons hold on"  />
                 <p> were getting your data as fast as we can </p>
             </div>
         }
-
         return (
             <div className={"GetLessonCall"}>
                 <h1 className={"appMainDiv"}> Time too learn something new? </h1>
+                <form onSubmit={this.setLessonId.bind(this)}>
                 <Container>
                     <Row>
                      {
-                          lessons.map((lesson) => {
+                          this.state.lessons.map((lesson) => {
                               if(subjectId !== lesson.lessonSubject.subjectId) {
                                   subjectId = lesson.lessonSubject.subjectId;
                                   return [ <h1> {lesson.lessonSubject.subjectName} </h1>,
-                                      <Col md={3}> <Link to={{ pathname: "/LoadingQuestions", state: { lessonId: lesson.lessonId}}}
-                                                         className={"btn btn-warning"}> {lesson.lessonName} </Link> </Col>  ]
+                                      <Col md={3}> <Button type={"submit"} onClick={(e) => this.changeLessonIdState(e, lesson.lessonName)}
+                                                           className={"btn btn-warning"}> {lesson.lessonName} </Button> </Col>  ]
                               } else {
                                   if (lesson.isLocked === true) {
-                                      return  <Col md={3}>   <Link className={"btn btn-danger disabled-link"} > {lesson.lessonName} </Link> </Col>
+                                      return  <Col md={3}>   <Button className={"btn btn-danger"} disabled > {lesson.lessonName} </Button> </Col>
                                   } else {
-                                      return <Col md={3}>   <Link className={"btn btn-danger disabled-link"}> {lesson.lessonName} </Link> </Col>
+                                      return <Col md={3}>   <Button  className={"btn btn-warning"} onClick={(e) => this.changeLessonIdState(e, lesson.lessonName)}>
+                                          {lesson.lessonName} </Button> </Col>
                                   }
                               }
                           })
                         }
                     </Row>
                 </Container>
+                </form>
             </div>
         )
     }

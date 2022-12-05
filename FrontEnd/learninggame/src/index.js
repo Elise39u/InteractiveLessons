@@ -7,6 +7,7 @@ import Menu from "./Compo/Menu";
 import App from "./Pages/App";
 import LessonPage from "./Pages/LessonPage.Js";
 import LoadingQuestions from "./Pages/LoadingQuestions.js"
+import QuestionPage from "./Pages/QuestionPage"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
               <Route index element={<App />} />
               <Route path="Lessons" element={<LessonPage />} />
               <Route path="LoadingQuestions" element={<LoadingQuestions />} />
+              <Route path="Questions" element={<QuestionPage />} />
           </Routes>
       </BrowserRouter>
   </React.StrictMode>
