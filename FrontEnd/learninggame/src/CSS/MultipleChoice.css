@@ -1,5 +1,6 @@
 .Answer {
     color: white;
+    background-color: white;
     border: black solid 5px;
     border-radius: 40px 40px;
     margin: 5%;
@@ -15,7 +16,10 @@
     margin-top: 5%;
 }
 
-
+h3 {
+    color: white;
+    text-align: center;
+}
 
 .answerImg {
     border-radius: 40px 40px;
