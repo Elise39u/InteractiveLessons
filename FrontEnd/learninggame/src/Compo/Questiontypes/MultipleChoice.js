@@ -34,11 +34,17 @@ class MultipleChoice extends React.Component {
         localStorage.setItem("nextQuestionId", nextQuestionNumber)
         localStorage.setItem("isCorrectAnswer", answer.isCorrect)
         localStorage.setItem("answerUsed", answer.answerId)
-        /*
-            TODO: Add the next questionId to storage
-             So for a example on Question 1 we store -> 1 as current questionID
-             2 becomes the next one. Dont forget that the Question array in local storage starts with 0
-         */
+
+        if(answer.isCorrect === true) {
+            if(parseInt(localStorage.getItem("correctAnswers")) === 0) {
+                localStorage.setItem("correctAnswers", 1)
+            } else {
+                const count1Up = parseInt(localStorage.getItem("correctAnswers")) + 1;
+
+                localStorage.setItem("correctAnswers", count1Up)
+            }
+        }
+        window.location.href = "/Answer"
     }
 
     render() {

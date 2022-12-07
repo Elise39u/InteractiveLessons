@@ -13,8 +13,8 @@ public class AnswerDAL
     {
         _dbConnection.OpenConnection();
 
-        MySqlCommand query = new MySqlCommand("SELECT * FROM answer WHERE questionId = 1"
-        , _dbConnection.Conn);
+        MySqlCommand query = new MySqlCommand("SELECT * FROM answer WHERE questionId = " + questionId  
+            , _dbConnection.Conn);
 
         var result = query.ExecuteReader();
 

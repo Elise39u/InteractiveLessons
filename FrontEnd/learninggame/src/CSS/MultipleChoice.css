@@ -1,11 +1,26 @@
-.Answer {
-    color: white;
-    background-color: white;
-    border: black solid 5px;
+.Answer, .CorrectAnswer, .WrongAnswer {
     border-radius: 40px 40px;
     margin: 5%;
     width: auto;
     height: 200px;
+}
+
+.Answer {
+    color: white;
+    background-color: white;
+    border: black solid 5px;
+}
+
+.CorrectAnswer {
+    color: white;
+    background-color: white;
+    border: lawngreen solid 5px;
+}
+
+.WrongAnswer {
+    color: white;
+    background-color: white;
+    border: red solid 5px;
 }
 
 .centerTxt {

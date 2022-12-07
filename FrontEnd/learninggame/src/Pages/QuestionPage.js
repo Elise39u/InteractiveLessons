@@ -1,7 +1,6 @@
 import React from "react";
 import Menu from "../Compo/Menu"
 import MelisaWondering from "../Img/teacher/Melissa/MelissaWondering.png"
-//import textBulb from "../Img/textbulb.png"
 import QuestionTypes  from "../Compo/Questiontypes/QuestionTypes";
 import MultipleChoiceQuestion from "../Compo/Questiontypes/MultipleChoice";
 import OpenQuestion from "../Compo/Questiontypes/Open"
@@ -31,6 +30,9 @@ class useQuestionPage extends React.Component {
 
 
     changeQuestionDataStates() {
+        localStorage.removeItem("isCorrectAnswer")
+        localStorage.removeItem("answerUsed")
+
         const questions = JSON.parse(localStorage.getItem("Questions"))
         const questionId = localStorage.getItem("QuestionId")
 
@@ -55,11 +57,6 @@ class useQuestionPage extends React.Component {
             default:
                 break;
         }
-    }
-
-    loadAnswerComponent() {
-        //Todo: Load answer component if button is clicked
-        // Also add current question id with a next one to load in after the answer
     }
 
     render() {
