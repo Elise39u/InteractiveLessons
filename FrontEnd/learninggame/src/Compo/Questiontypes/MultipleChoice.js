@@ -34,9 +34,10 @@ class MultipleChoice extends React.Component {
         localStorage.setItem("nextQuestionId", nextQuestionNumber)
         localStorage.setItem("isCorrectAnswer", answer.isCorrect)
         localStorage.setItem("answerUsed", answer.answerId)
+        localStorage.setItem("answerTeacher", answer.answerValue)
 
         if(answer.isCorrect === true) {
-            if(parseInt(localStorage.getItem("correctAnswers")) === 0) {
+            if(parseInt(localStorage.getItem("correctAnswers")) === 0 || isNaN(parseInt(localStorage.getItem("correctAnswers")))) {
                 localStorage.setItem("correctAnswers", 1)
             } else {
                 const count1Up = parseInt(localStorage.getItem("correctAnswers")) + 1;

@@ -1,6 +1,5 @@
 import NavBarMenu from "../Compo/Menu";
 import '../CSS/App.css';
-import LessonButtons from "../Compo/LessonButtons";
 import GetLessonCall from "../Compo/getLessonCall";
 
 let userName = "";
@@ -9,7 +8,6 @@ if(localStorage.getItem("username") === null) {
 } else {
     userName = localStorage.getItem("username")
 }
-
 
 function LessonPage() {
    return (

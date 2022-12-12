@@ -57,7 +57,8 @@ class useAnswerPage extends React.Component {
     goToTheNextQuestion(e) {
         e.preventDefault()
         const questions = JSON.parse(localStorage.getItem("Questions"))
-        if(questions.length <= parseInt(localStorage.getItem("nextQuestionId"))) {
+        if(questions.length <= parseInt(localStorage.getItem("nextQuestionId")) - 1) {
+            //TODO: add end of the lessonPage
         } else {
             localStorage.setItem("QuestionId", parseInt(localStorage.getItem("nextQuestionId")))
             window.location.href = "/Questions"
@@ -66,6 +67,7 @@ class useAnswerPage extends React.Component {
 
     render() {
         const {showMCQ, showOPQ, showLSQ, question} = this.state
+        const teacherTxt = localStorage.getItem("answerTeacher")
 
         if(question === null) {
             return  <div> <p> Answer is still calculated hold on  </p></div>
@@ -75,7 +77,7 @@ class useAnswerPage extends React.Component {
                     return <div>
                         <Menu/>
                         <img className={"TeacherImg"} src={MellisaOhYes} alt={"teacher idle Mellisa"}/>
-                        <p> You got the answer Correct Congrats i knew you could do it  </p>
+                        <p> {teacherTxt}  </p>
                         <form onSubmit={this.goToTheNextQuestion.bind(this)}>
                             <p><Button type={"submit"} className={"btn-warning"}> Go to the next question </Button></p>
                         </form>
@@ -87,7 +89,7 @@ class useAnswerPage extends React.Component {
                     return <div>
                         <Menu/>
                         <img className={"TeacherImg"} src={MellisaOhNo} alt={"teacher idle Mellisa"}/>
-                        <p> Oehhhh you got the answer wrong better luck next time  {localStorage.getItem("username")} </p>
+                        <p> {teacherTxt}  </p>
                         <form onSubmit={this.goToTheNextQuestion.bind(this)}>
                             <p><Button type={"submit"} className={"btn-warning"}> Go to the next question </Button></p>
                         </form>

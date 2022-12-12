@@ -1,0 +1,11 @@
+.OpenCorrectAnswer {
+    background-color: white;
+    border-radius: 40px 40px;
+    border: lawngreen solid 5px;
+}
+
+.OpenWrongAnswer {
+    background-color: white;
+    border-radius: 40px 40px;
+    border: red solid 5px;
+}
