@@ -58,7 +58,7 @@ class useAnswerPage extends React.Component {
         e.preventDefault()
         const questions = JSON.parse(localStorage.getItem("Questions"))
         if(questions.length <= parseInt(localStorage.getItem("nextQuestionId")) - 1) {
-            //TODO: add end of the lessonPage
+            window.location.href = "/EndLesson"
         } else {
             localStorage.setItem("QuestionId", parseInt(localStorage.getItem("nextQuestionId")))
             window.location.href = "/Questions"

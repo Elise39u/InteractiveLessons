@@ -6,8 +6,8 @@ namespace DALLayer;
 
 public class AnswerDAL
 {
-    private DBConnection _dbConnection = new DBConnection();
-    private List<DALAnswerDTO> _dalAnswerDtos = new List<DALAnswerDTO>();
+    private DBConnection _dbConnection = new();
+    private List<DALAnswerDTO> _dalAnswerDtos = new();
 
     public List<DALAnswerDTO> getAnswersByQuestion(int questionId)
     {

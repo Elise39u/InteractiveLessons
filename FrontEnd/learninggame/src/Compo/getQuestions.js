@@ -38,26 +38,35 @@ class GetQuestions extends React.Component {
         if(localStorage.getItem("Questions") === null || localStorage.getItem("QuestionId") === "0") {
             alert("An error occurred while setting the question data. Our monkeys are looking into it ")
         } else {
-            window.location.href  = "/Questions"
+            window.location  = "/Questions"
         }
     }
 
     render() {
         const {LoadingData, Questions} = this.state
-        if(!LoadingData) {
+        if (!LoadingData) {
             return <div>
                 <h1> Please hold on {localStorage.getItem("username")}</h1>
                 <p> Our monkeys works as fast as they can to get the questions</p>
             </div>
         }
-        return(
-            <div>
-                <form onSubmit={this.startTheLesson.bind(this)}>
-                    { this.setQuestionsInfo(Questions) }
-                    <p className={"centerP"}><Button type={"submit"} className={"primary"}> Start the Lesson </Button> </p>
-                </form>
+
+        if (Questions === [] || Questions.length === 0) {
+            return <div>
+                <p> Hold on were doing some work with the monkeys <br/>
+                    To set your questions ready for the lessons </p>
             </div>
-        )
+        } else {
+            return (
+                <div>
+                    <form onSubmit={this.startTheLesson.bind(this)}>
+                        {this.setQuestionsInfo(Questions)}
+                        <p className={"centerP"}><Button type={"submit"} className={"primary"}> Start the
+                            Lesson </Button></p>
+                    </form>
+                </div>
+            )
+        }
     }
 }
 

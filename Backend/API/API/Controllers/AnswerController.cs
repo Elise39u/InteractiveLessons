@@ -21,7 +21,7 @@ public class AnswerController
     public List<Answer> GetAnswersById(int questionId)
     {
         List<Answer> answers = new List<Answer>();
-        List<ApiAnswerDTO> apiAnswerDtos = _answerLogic.GetAnswersForQuestion(questionId);
+        List<ApiAnswerDTO>  apiAnswerDtos = _answerLogic.GetAnswersForQuestion(questionId);
 
         for (int i = 0; i < apiAnswerDtos.Count; i++)
         {
