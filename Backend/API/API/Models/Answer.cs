@@ -48,6 +48,11 @@ public class Answer
         IsCorrect = isCorrect;
     }
 
+    public Answer()
+    {
+        
+    }
+    
     public List<KeyValuePair<int, string>> AddTeacherAnswerTxt(int answerId, string teacherTxT)
     {
         TeacherAnswerTxT.Add(new KeyValuePair<int, string>(answerId, teacherTxT));

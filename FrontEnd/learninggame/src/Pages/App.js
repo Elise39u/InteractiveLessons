@@ -5,7 +5,7 @@ import {useState} from "react";
 
 function App() {
     const [userName, setName] = useState("");
-
+    localStorage.clear()
     const handleSubmit = (event) => {
         event.preventDefault();
         if(userName === "" || !userName) {
