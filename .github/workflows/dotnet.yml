@@ -34,10 +34,12 @@ jobs:
       run: |
         export DOTNET_CLI_TELEMETRY_OPTOUT=1
         dotnet publish -c Release
+      working-directory: ./BackEnd/API
     - name: Tests
       run: |
         cp MyProject.Repository.Test/Data/appSettings.gitlab.json MyProject.Repository.Test/Data/AppSettings.json
         dotnet test --logger "junit" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput='./TestResults/'
+      working-directory: ./BackEnd/API
     - name: Coverage Report
       run: |
         dotnet --version
@@ -46,6 +48,7 @@ jobs:
         ./tools/reportgenerator "-reports:**/TestResults/coverage.opencover.xml;" "-targetdir:Reports" -reportTypes:Html;
         ./tools/reportgenerator "-reports:**/TestResults/coverage.opencover.xml;" "-targetdir:Reports" -reportTypes:Badges;
         cat ./Reports/Summary.txt
+      working-directory: ./BackEnd/API
     - uses: actions/upload-artifact@v1
       with:
           name: CodeCoverage
