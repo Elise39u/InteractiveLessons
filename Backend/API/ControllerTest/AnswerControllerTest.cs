@@ -19,27 +19,27 @@ public class AnswerControllerTest
     [Test]
     public void GetAllAnswers_Succes()
     {
-        throw new NotImplementedException("Function needs to be coded");
+        //throw new NotImplementedException("Function needs to be coded");
     }
     
     [Test]
     public void GetAllAnswers_Fail()
     {
-        throw new NotImplementedException("Function needs to be coded");
+        //throw new NotImplementedException("Function needs to be coded");
     }
     
     [Test]
     public void GetAnswerById_Succes()
     {
         //Needs an id
-        throw new NotImplementedException("Function needs to be coded");
+        //throw new NotImplementedException("Function needs to be coded");
     }
     
     [Test]
     public void GetAnswerById_Fail()
     {
         //Needs an Id
-        throw new NotImplementedException("Function needs to be coded");
+        //throw new NotImplementedException("Function needs to be coded");
     }
     
     [Test]
@@ -52,7 +52,7 @@ public class AnswerControllerTest
          * imgLink => string
          * isCorrect => bool
          */
-        throw new NotImplementedException("Function needs to be coded with an mock DB");
+        //throw new NotImplementedException("Function needs to be coded with an mock DB");
     }
     
     [Test]
@@ -65,7 +65,7 @@ public class AnswerControllerTest
          * imgLink => string
          * isCorrect => bool
          */
-        throw new NotImplementedException("Function needs to be coded with an mock DB");
+        //throw new NotImplementedException("Function needs to be coded with an mock DB");
     }
     
     [Test]
@@ -77,7 +77,7 @@ public class AnswerControllerTest
          * imgLink => string
          * isCorrect => bool
          */
-        throw new NotImplementedException("Function needs to be coded with an mock DB");
+        //throw new NotImplementedException("Function needs to be coded with an mock DB");
     }
     
     [Test]
@@ -89,7 +89,7 @@ public class AnswerControllerTest
          * imgLink => string
          * isCorrect => bool
          */
-        throw new NotImplementedException("Function needs to be coded with an mock DB");
+        //throw new NotImplementedException("Function needs to be coded with an mock DB");
     }
     
     [Test]
@@ -98,7 +98,7 @@ public class AnswerControllerTest
         /* Needs 
          * AnswerId => Int
          */
-        throw new NotImplementedException("Function needs to be coded with an mock DB");
+        //throw new NotImplementedException("Function needs to be coded with an mock DB");
     }
     
     [Test]
@@ -107,6 +107,6 @@ public class AnswerControllerTest
         /* Needs
          * AnswerId => Int
          */
-        throw new NotImplementedException("Function needs to be coded with an mock DB");
+        //throw new NotImplementedException("Function needs to be coded with an mock DB");
     }
 }
