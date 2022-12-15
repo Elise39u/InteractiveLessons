@@ -1,4 +1,6 @@
 ﻿using API.Models;
+using APIDTO;
+using LogicLayer;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -7,17 +9,23 @@ namespace API.Controllers;
 [Route("[controller]")]
 public class LessonController : ControllerBase
 {
+    private LessonLogic _lessonLogic = new LessonLogic();
         
     [HttpGet("AllLessons")]
     public List<Lesson> GetLessons()
     {
         List<Lesson> lessons = new List<Lesson>();
-        for (int i = 0; i < 4; i++)
+        List<ApiLessonDTO> lessonDtos = _lessonLogic.GetAllLessons();
+
+        for (int i = 0; i < lessonDtos.Count; i++)
         {
-            Lesson lesson = new Lesson(i, "Music" + i, new Subject(1, "Guitar Lessons"));
+            Lesson lesson = new Lesson(lessonDtos[i].LessonId, lessonDtos[i].LessonName, new Subject(
+                    lessonDtos[i].LessonSubject.SubjectId, lessonDtos[i].LessonSubject.SubjectName),
+                lessonDtos[i].IsLocked);
+            
             lessons.Add(lesson);
         }
-
+        
         return lessons;
     }
 

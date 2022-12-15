@@ -1,0 +1,12 @@
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\bin\Debug\net6.0\APIDTO.deps.json
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\bin\Debug\net6.0\APIDTO.dll
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\bin\Debug\net6.0\APIDTO.pdb
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\obj\Debug\net6.0\APIDTO.csproj.AssemblyReference.cache
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\obj\Debug\net6.0\APIDTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\obj\Debug\net6.0\APIDTO.AssemblyInfoInputs.cache
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\obj\Debug\net6.0\APIDTO.AssemblyInfo.cs
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\obj\Debug\net6.0\APIDTO.csproj.CoreCompileInputs.cache
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\obj\Debug\net6.0\APIDTO.dll
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\obj\Debug\net6.0\refint\APIDTO.dll
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\obj\Debug\net6.0\APIDTO.pdb
+D:\school\S5 Stage\Git Folder\Backend\API\APIDTO\obj\Debug\net6.0\ref\APIDTO.dll

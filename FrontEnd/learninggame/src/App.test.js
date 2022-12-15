@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './Pages/App';
 
-test('renders learn react link', () => {
+test('Get username on starting page', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText(/Username/i);
   expect(linkElement).toBeInTheDocument();
 });

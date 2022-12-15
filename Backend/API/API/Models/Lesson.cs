@@ -5,6 +5,7 @@ public class Lesson
     private readonly int _lessonId;
     private readonly string _lessonName;
     private readonly Subject _lessonSubject;
+    private readonly bool _isLocked;
     private List<Question> LessonQuestions { get; } = new List<Question>();
     
     public int LessonId
@@ -25,11 +26,23 @@ public class Lesson
         private init=> _lessonSubject = value;
     }
 
-    public Lesson(int lessonId, string lessonName, Subject lessonSubject)
+    public bool IsLocked
+    {
+        get => _isLocked;
+        private init => _isLocked = value;
+    }
+    
+    public Lesson(int lessonId, string lessonName, Subject lessonSubject, bool isLocked)
     {
         LessonId = lessonId;
         LessonName = lessonName;
         LessonSubject = lessonSubject;
+        IsLocked = isLocked;
+    }
+
+    public Lesson()
+    {
+        
     }
 
     public List<Question> AddQuestionToList(Question question)
