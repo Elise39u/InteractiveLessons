@@ -1,0 +1,12 @@
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\bin\Debug\net6.0\DALDTO.deps.json
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\bin\Debug\net6.0\DALDTO.dll
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\bin\Debug\net6.0\DALDTO.pdb
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\obj\Debug\net6.0\DALDTO.csproj.AssemblyReference.cache
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\obj\Debug\net6.0\DALDTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\obj\Debug\net6.0\DALDTO.AssemblyInfoInputs.cache
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\obj\Debug\net6.0\DALDTO.AssemblyInfo.cs
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\obj\Debug\net6.0\DALDTO.csproj.CoreCompileInputs.cache
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\obj\Debug\net6.0\DALDTO.dll
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\obj\Debug\net6.0\refint\DALDTO.dll
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\obj\Debug\net6.0\DALDTO.pdb
+D:\school\S5 Stage\Git Folder\Backend\API\DALDTO\obj\Debug\net6.0\ref\DALDTO.dll

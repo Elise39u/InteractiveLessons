@@ -1,0 +1,21 @@
+.boldBlack {
+    color: #bdbdbd;
+    font-style: oblique;
+}
+
+.greenSpan {
+    color: springgreen;
+    font-style: oblique;
+}
+
+.redSpan {
+    color: orangered;
+    font-style: oblique;
+}
+
+.containerEnd {
+    margin-top: 30px;
+    border: 4px solid white;
+    background-color: #126200;
+    padding: 15px;
+}
