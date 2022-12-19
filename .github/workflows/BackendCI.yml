@@ -25,5 +25,10 @@ jobs:
       working-directory: Backend/API
     - name: Build
       run: dotnet build --no-restore
+      working-directory: Backend/API
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      working-directory: Backend/API/DALLayerTest
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+      working-directory: Backend/API/ControllerTest
