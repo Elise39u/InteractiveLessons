@@ -8,6 +8,7 @@ import OpenQuestion from "../Compo/Questiontypes/Open"
 import ListingQuestion from "../Compo/Questiontypes/Listening"
 import "../CSS/QuestionPage.css"
 import ToastQuestion from "../Compo/Questiontypes/ToastQuestion";
+import Sound from "../Inc/HitSound.mp3"
 
 class useQuestionPage extends React.Component {
     constructor(props) {
@@ -30,6 +31,25 @@ class useQuestionPage extends React.Component {
         this.loadQuestionComponent()
     }
 
+    playHitSound() {
+        const audio = new Audio(Sound)
+
+        audio.play();
+
+        const hitSoundScore = parseInt(localStorage.getItem("hitScore"))
+
+        if(isNaN(hitSoundScore)) {
+            localStorage.setItem("hitScore", 0)
+        }
+        else if(hitSoundScore >= 10) {
+            localStorage.removeItem("hitScore")
+            localStorage.setItem("special", "You thought hitting me was fun well im ending the lesson")
+            window.location.href = "/EndLesson"
+        }
+        else {
+            localStorage.setItem("hitScore", parseInt(hitSoundScore + 1))
+        }
+    }
 
     changeQuestionDataStates() {
         localStorage.removeItem("isCorrectAnswer")
@@ -71,7 +91,7 @@ class useQuestionPage extends React.Component {
                 return  <div>
                     <Menu/>
                     <div className={"centerForm"}>
-                        <img className={"TeacherImg"} src={MelisaIdle} alt={"teacher idle Mellisa"}/>
+                        <img onClick={this.playHitSound} className={"TeacherImg"} src={MelisaIdle} alt={"teacher idle Mellisa"}/>
                         <p> Hi there im Melissa Click the button below here to see the question</p>
                     </div>
                     <ToastQuestion></ToastQuestion>
@@ -84,7 +104,7 @@ class useQuestionPage extends React.Component {
                 return <div>
                     <Menu/>
                     <div className={"centerForm"}>
-                        <img className={"TeacherImg"} src={MelisaWondering} alt={"teacher idle Mellisa"}/>
+                        <img onClick={this.playHitSound} className={"TeacherImg"} src={MelisaWondering} alt={"teacher idle Mellisa"}/>
                         <p> Hi there im Melissa Click the button below here to see the question</p>
                     </div>
                     <ToastQuestion></ToastQuestion>

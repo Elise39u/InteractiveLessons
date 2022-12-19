@@ -22,6 +22,7 @@ function EndLessonPage() {
         localStorage.removeItem("answerTeacher")
         localStorage.removeItem("Questions")
         localStorage.removeItem("isCorrectAnswer")
+        localStorage.removeItem("special")
 
         window.location = "/Lessons"
     }
@@ -54,7 +55,7 @@ function EndLessonPage() {
                 returnText = "B"
                 break;
             case goodPercentage >= 76 && goodPercentage <= 80:
-                returnText = "TB+"
+                returnText = "B+"
                 break;
             case goodPercentage >= 81 && goodPercentage <= 85:
                 returnText = " A-"
@@ -66,7 +67,7 @@ function EndLessonPage() {
                 returnText = "A+"
                 break;
             default:
-                returnText = "your score couldn't be calculated :("
+                returnText = "Idk what happened but by default you get a F"
         }
 
         return returnText;
@@ -96,6 +97,13 @@ function EndLessonPage() {
     }
 
     let score = calculateLessonScorePercentageAnswers();
+    let changeTxt;
+    if(localStorage.getItem("special") !== null) {
+        changeTxt = true
+    } else {
+        changeTxt = false;
+    }
+
     return (
         <div className={"App"}>
             <NavBarMenu />
@@ -103,17 +111,21 @@ function EndLessonPage() {
             <Container className={"containerEnd"}>
                 <Row className={"endRow"}>
                     <Col className={"endCol"}>
-                        <p> Oh look at the its the end of the lesson. <br />
-                            If your interested {localStorage.getItem("username")} then here are your stats</p>
+                        <p> {changeTxt ? <span> {localStorage.getItem("special")} how about that {localStorage.getItem("username")} </span> : <span> Oh look at the its the end of the lesson. <br />
+                            If your interested {localStorage.getItem("username")} then here are your stats</span>} </p>
 
                         <p>Lessons length was: <span className={"boldBlack"}> {getLessonsLength()} </span> questions long</p>
-                        <p>Times you answered correctly <span className={"greenSpan"}> {localStorage.getItem("correctAnswers")} </span>
+                        <p>Times you answered correctly <span className={"greenSpan"}> {changeTxt ?
+                            <span> You cheated or try to hit me too much {localStorage.getItem("username")} </span> : localStorage.getItem("correctAnswers")} </span>
                             during this lesson</p>
-                        <p>Here is the percentage amount of correct answers <span className={"greenSpan"}> {calculateLessonScoreGoodAnswers()}% </span>
+                        <p>Here is the percentage amount of correct answers <span className={"greenSpan"}> {changeTxt ?
+                            <span> Trying to hit me he. That doesnt work or you cheated either one of the two?</span> : calculateLessonScoreGoodAnswers()}% </span>
                             during this lesson</p>
-                        <p>Times you answered wrong <span className={"redSpan"}> {getWrongAnswersCount()} </span>
+                        <p>Times you answered wrong <span className={"redSpan"}> {changeTxt ?
+                            <span> Hitting me he that doesnt get you through the lesson. Or cheating even worse </span> : getWrongAnswersCount} </span>
                             during this lesson </p>
-                        <p>Here is the percentage amount of wrong answers <span className={"redSpan"}> {calculateLessonScoreWrongAnswers()}% </span>
+                        <p>Here is the percentage amount of wrong answers <span className={"redSpan"}> {changeTxt ?
+                            <span>Hitting a teacher doesnt work for you. It only works against you. Or you cheated but it is on the same level</span> : calculateLessonScoreWrongAnswers()}% </span>
                             during this lesson</p>
                         <p>Grade for the lesson: {
                             score.includes("C") || score.includes("D") ? <span className={"redSpan"}>{score}</span>

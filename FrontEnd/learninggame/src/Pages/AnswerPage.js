@@ -7,6 +7,8 @@ import MultipleChoiceQuestion from "../Compo/AnswerTypes/MultipleChoice";
 import OpenQuestion from "../Compo/AnswerTypes/Open"
 import ListingQuestion from "../Compo/AnswerTypes/Listening"
 import Button from "react-bootstrap/Button";
+import Sound from "../Inc/HitSound.mp3";
+import "../CSS/Answer.css"
 
 class useAnswerPage extends React.Component {
     constructor(props) {
@@ -54,6 +56,26 @@ class useAnswerPage extends React.Component {
         }
     }
 
+    playHitSound() {
+        const audio = new Audio(Sound)
+
+        audio.play();
+
+        const hitSoundScore = parseInt(localStorage.getItem("hitScore"))
+
+        if(isNaN(hitSoundScore)) {
+            localStorage.setItem("hitScore", 0)
+        }
+        else if(hitSoundScore >= 10) {
+            localStorage.removeItem("hitScore")
+            localStorage.setItem("special", "You thought hitting me was fun well im ending the lesson")
+            window.location.href = "/EndLesson"
+        }
+        else {
+            localStorage.setItem("hitScore", parseInt(hitSoundScore + 1))
+        }
+    }
+
     goToTheNextQuestion(e) {
         e.preventDefault()
         const questions = JSON.parse(localStorage.getItem("Questions"))
@@ -76,8 +98,8 @@ class useAnswerPage extends React.Component {
                 if(isCorrect === "true") {
                     return <div>
                         <Menu/>
-                        <img className={"TeacherImg"} src={MellisaOhYes} alt={"teacher idle Mellisa"}/>
-                        <p> {teacherTxt}  </p>
+                        <img onClick={this.playHitSound} className={"TeacherImg"} src={MellisaOhYes} alt={"teacher idle Mellisa"}/>
+                        <p className={"teacherTxt"}> {teacherTxt}  </p>
                         <form onSubmit={this.goToTheNextQuestion.bind(this)}>
                             <p><Button type={"submit"} className={"btn-warning"}> Go to the next question </Button></p>
                         </form>
@@ -88,8 +110,8 @@ class useAnswerPage extends React.Component {
                 } else {
                     return <div>
                         <Menu/>
-                        <img className={"TeacherImg"} src={MellisaOhNo} alt={"teacher idle Mellisa"}/>
-                        <p> {teacherTxt}  </p>
+                        <img onClick={this.playHitSound} className={"TeacherImg"} src={MellisaOhNo} alt={"teacher idle Mellisa"}/>
+                        <p className={"teacherTxt"}> {teacherTxt}  </p>
                         <form onSubmit={this.goToTheNextQuestion.bind(this)}>
                             <p><Button type={"submit"} className={"btn-warning"}> Go to the next question </Button></p>
                         </form>
