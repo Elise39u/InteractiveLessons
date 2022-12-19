@@ -3,6 +3,8 @@ import Container from "react-bootstrap/Container";
 import {Row} from "react-bootstrap";
 import loadingGif from "../../Img/loading.gif";
 import "../../CSS/Open.css"
+import successSound from "../../Inc/crowd_small_chil_ec049202.mp3";
+import failSound from "../../Inc/a-a-and-you-fail.mp3";
 
 class Open extends React.Component {
     constructor(props) {
@@ -11,6 +13,16 @@ class Open extends React.Component {
             Answers: [],
             LoadingData: false,
         }
+    }
+
+    playCheerSound() {
+        let audio = new Audio(successSound)
+        audio.play()
+    }
+
+    playFailSound() {
+        let audio = new Audio(failSound)
+        audio.play()
     }
 
     componentDidMount() {
@@ -46,6 +58,7 @@ class Open extends React.Component {
                         <Row>
                             <form>
                                 <div className={"centerForm"}>
+                                    {this.playCheerSound()}
                                     <input className={"OpenCorrectAnswer"} type={"text"} alt={"Your answer"} value={Answer}
                                            disabled={true}/>
                                 </div>
@@ -59,6 +72,7 @@ class Open extends React.Component {
                         <Row>
                             <form>
                                 <div className={"centerForm"}>
+                                    {this.playFailSound()}
                                     <input className={"OpenWrongAnswer"} type={"text"} alt={"Your answer"} value={Answer}
                                            disabled={true}/>
                                 </div>
