@@ -2,9 +2,9 @@ name: CI/CD
 
 on:
   push:
-    branches: [ master ]
+    branches: [ Master ]
   pull_request:
-    branches: [ master ]
+    branches: [ Master ]
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.x]
 
     steps:
     - name: Checkout repository
@@ -26,9 +26,12 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+      working-directory: ./FrontEnd/learninggame
 
     - name: Run the tests
       run: npm test
+      working-directory: ./FrontEnd/learninggame
 
     - name: Build
       run: npm run build
+      working-directory: ./FrontEnd/learninggame
