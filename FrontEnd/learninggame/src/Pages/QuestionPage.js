@@ -91,7 +91,7 @@ class useQuestionPage extends React.Component {
                 return  <div>
                     <Menu/>
                     <div className={"centerForm"}>
-                        <img onClick={this.playHitSound} className={"TeacherImg"} src={MelisaIdle} alt={"teacher idle Mellisa"}/>
+                        <img id={"teacher"} onClick={this.playHitSound} className={"TeacherImg"} src={MelisaIdle} alt={"teacher idle Mellisa"}/>
                         <p> Hi there im Melissa Click the button below here to see the question</p>
                     </div>
                     <ToastQuestion></ToastQuestion>
@@ -104,7 +104,7 @@ class useQuestionPage extends React.Component {
                 return <div>
                     <Menu/>
                     <div className={"centerForm"}>
-                        <img onClick={this.playHitSound} className={"TeacherImg"} src={MelisaWondering} alt={"teacher idle Mellisa"}/>
+                        <img id={"teacher"} onClick={this.playHitSound} className={"TeacherImg"} src={MelisaWondering} alt={"teacher idle Mellisa"}/>
                         <p> Hi there im Melissa Click the button below here to see the question</p>
                     </div>
                     <ToastQuestion></ToastQuestion>

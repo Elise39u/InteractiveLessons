@@ -98,7 +98,7 @@ class useAnswerPage extends React.Component {
                 if(isCorrect === "true") {
                     return <div>
                         <Menu/>
-                        <img onClick={this.playHitSound} className={"TeacherImg"} src={MellisaOhYes} alt={"teacher idle Mellisa"}/>
+                        <img id={"teacher"} onClick={this.playHitSound} className={"TeacherImg"} src={MellisaOhYes} alt={"teacher idle Mellisa"}/>
                         <p className={"teacherTxt"}> {teacherTxt}  </p>
                         <form onSubmit={this.goToTheNextQuestion.bind(this)}>
                             <p><Button type={"submit"} className={"btn-warning"}> Go to the next question </Button></p>
@@ -110,7 +110,7 @@ class useAnswerPage extends React.Component {
                 } else {
                     return <div>
                         <Menu/>
-                        <img onClick={this.playHitSound} className={"TeacherImg"} src={MellisaOhNo} alt={"teacher idle Mellisa"}/>
+                        <img id={"teacher"} onClick={this.playHitSound} className={"TeacherImg"} src={MellisaOhNo} alt={"teacher idle Mellisa"}/>
                         <p className={"teacherTxt"}> {teacherTxt}  </p>
                         <form onSubmit={this.goToTheNextQuestion.bind(this)}>
                             <p><Button type={"submit"} className={"btn-warning"}> Go to the next question </Button></p>

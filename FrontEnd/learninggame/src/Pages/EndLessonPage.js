@@ -107,7 +107,7 @@ function EndLessonPage() {
     return (
         <div className={"App"}>
             <NavBarMenu />
-            <img className={"TeacherImg"} src={MelisaIdle} alt={"teacher idle Mellisa"}/>
+            <img id={"teacher"} className={"TeacherImg"} src={MelisaIdle} alt={"teacher idle Mellisa"}/>
             <Container className={"containerEnd"}>
                 <Row className={"endRow"}>
                     <Col className={"endCol"}>
