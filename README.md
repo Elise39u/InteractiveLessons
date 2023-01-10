@@ -1,5 +1,6 @@
 # InteractiveLessons
-An Interactive lesson application guided by an avatar on screen, web based 
+An Interactive lesson application guided by an avatar on screen, web based  
+https://www.youtube.com/watch?v=sOr3B5-7rKY <--- Link to the MVP demo i made 
 
 ## The idea
 The idea of the application is to help teachers in their lessons.    
